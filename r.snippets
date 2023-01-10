@@ -1,3 +1,10 @@
 snippet my_code
 	pacman::p_load(tidyverse,rio,here,lubridate,${1:other_pkg})
 	devtools::source_gist("fe609cb7952519d21b86d6599b1058fd", quiet=T)
+	
+snippet cw
+	case_when(
+		${1:variable} == ${2:value1} ~ "${3:code1}",
+		${1:variable} == ${4:value2} ~ "${5:code2}",
+		TRUE ~ as.character(${6:code3})
+	)
