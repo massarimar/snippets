@@ -8,3 +8,10 @@ snippet cw
 		${1:variable} == ${4:value2} ~ "${5:code2}",
 		TRUE ~ as.character(${6:code3})
 	)
+
+snippet tr
+	tribble(
+		~${1:colA}, ~${2:colB},
+		${3:val1},   ${4:val2},
+		${5:val3},   ${6:val4}
+	)
