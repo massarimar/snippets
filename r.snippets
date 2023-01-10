@@ -7,6 +7,25 @@ snippet my_cut_age
 			right = F,
 			labels = c("0-11", "12-17","18-39", "40-59", "60-69", "70-79", "80-89", "90+"))
 
+snippet my_title_Rmd
+	---
+	title: "${1:mytitle}"
+	subtitle: "${2:mysubtitle}"
+	date: "`r format(Sys.time(), '%d %B %Y')`"
+	output:
+		html_document:
+			theme: cosmo    
+			highlight: monochrome
+			toc: yes
+			toc_depth: '3'
+			toc_float:
+				collapsed: false
+			number_sections: true
+			code_folding: hide
+			css: styles_report.css
+			df_print: paged
+	---
+
 snippet cw
 	case_when(
 		${1:variable} == ${2:value1} ~ "${3:code1}",
