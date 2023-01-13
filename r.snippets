@@ -1,3 +1,6 @@
+snippet aa
+	${1:mydataset} <- ${1:mydataset} %>% ${0}
+
 snippet my_code
 	pacman::p_load(tidyverse,rio,here,lubridate,${1:other_pkg})
 	devtools::source_gist("fe609cb7952519d21b86d6599b1058fd", quiet=T)
